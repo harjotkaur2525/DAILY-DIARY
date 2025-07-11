@@ -1,112 +1,124 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SmartFusion Training Diary</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: 'Times New Roman', serif; }
-    section { display: none; }
-    section.active { display: block; }
+    body {
+      font-family: 'Times New Roman', serif;
+      background-image: url('https://www.bing.com/images/search?q=gndec%20collge%20pics&FORM=IQFRBA&id=81A8DBB60E862F48204881B879D9F6B04C22DD4F');
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: #521C0D;
+    }
+    section {
+      display: none;
+      background-color: rgba(255, 233, 154, 0.5);
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+    section.active {
+      display: block;
+    }
   </style>
 </head>
-<body class="bg-black text-gray-100 min-h-screen">
+<body class="bg-[#F4E7E1] min-h-screen p-6">
 
-  <div class="max-w-5xl mx-auto px-6 py-10 space-y-10">
+  <!-- Header -->
+  <header class="text-center mb-8 bg-[#FFD586] bg-opacity-90 py-6 px-4 rounded-lg shadow-md">
+    <h1 class="text-4xl font-bold text-[#521C0D]">SmartFusion Training Diary</h1>
+    <h2 class="text-xl text-[#521C0D] mt-2 tracking-wide">GURU NANAK DEV ENGINEERING COLLEGE, LUDHIANA</h2>
+    <div class="flex justify-center mt-6">
+      <img src="https://upload.wikimedia.org/wikipedia/en/4/4f/GNDEC_logo.png"
+           alt="GNDEC Logo"
+           class="w-32 bg-white bg-opacity-60 p-2 rounded shadow-lg" />
+    </div>
+    <div class="max-w-2xl mx-auto mt-6 bg-white bg-opacity-50 p-4 rounded">
+      <p class="text-[#521C0D]">
+        A 4-week deep dive into SmartFusion – blending AI, ML, and IoT into real-world embedded systems. Hands-on learning, project development, and creative exploration.
+      </p>
+    </div>
+  </header>
 
-    <!-- HOME -->
-    <section id="home" class="active">
-      <div class="text-center">
-        <h1 class="text-5xl font-bold text-orange-500 mb-4">SmartFusion Training Diary</h1>
-        <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
-          A 4-week deep dive into SmartFusion – blending AI, ML, and IoT into real-world embedded systems. Hands-on learning, project development, and creative innovation.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <button onclick="show('info')" class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg shadow">Trainee Info</button>
-          <button onclick="show('diary')" class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg shadow">Training Diary</button>
-          <button onclick="show('project')" class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg shadow">Project</button>
-          <button onclick="show('gallery')" class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg shadow">Gallery</button>
-          <button onclick="show('certificates')" class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg shadow">Certificates</button>
-        </div>
-      </div>
-    </section>
+  <!-- Trainee Info -->
+  <section id="trainee" class="active max-w-xl mx-auto text-center">
+    <h2 class="text-2xl font-semibold text-[#521C0D] mb-2">Trainee Information</h2>
+    <ul class="list-none space-y-2 text-[#521C0D]">
+      <li><strong>Name:</strong> Harjot Kaur</li>
+      <li><strong>Class:</strong> CSB1</li>
+      <li><strong>URN:</strong> 2302535</li>
+      <li><strong>Branch:</strong> Computer Science and Engineering</li>
+    </ul>
+  </section>
 
-    <!-- TRAINEE INFO -->
-    <section id="info">
-      <h2 class="text-3xl text-orange-400 font-bold mb-6">Trainee Information</h2>
-      <div class="bg-neutral-900 p-6 rounded-lg shadow-md border border-orange-500">
-        <ul class="space-y-2 text-lg">
-          <li><strong>Name:</strong> Harjot Kaur</li>
-          <li><strong>Class:</strong> B.Tech CSE</li>
-          <li><strong>URN:</strong> URN123456</li>
-          <li><strong>Branch:</strong> Computer Science and Engineering</li>
-          <li><strong>Institute:</strong> Your College Name Here</li>
-        </ul>
-      </div>
-      <button onclick="show('home')" class="mt-6 bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded">← Back</button>
-    </section>
-
-    <!-- TRAINING DIARY -->
-    <section id="diary">
-      <h2 class="text-3xl text-orange-400 font-bold mb-6">Training Diary</h2>
-      <div class="space-y-4">
-
-        <details class="bg-neutral-900 p-4 rounded-lg border border-orange-500">
-          <summary class="text-orange-300 text-lg font-semibold cursor-pointer">Week 1</summary>
-          <div class="ml-4 mt-2 space-y-2">
-
-            <details class="bg-neutral-800 p-3 rounded">
-              <summary class="text-orange-200">Day 1</summary>
-              <div class="text-gray-300 mt-2 ml-4 space-y-2">
-                <details>
-                  <summary>Introduction to SmartFusion</summary>
-                  <p class="ml-4">Covered architecture: FPGA + ARM Cortex-M + Analog. Discussed its relevance in AI/IoT systems.</p>
-                </details>
-                <details>
-                  <summary>AI vs ML Overview</summary>
-                  <p class="ml-4">Learned supervised vs unsupervised learning and real-life ML applications in IoT devices.</p>
-                </details>
-              </div>
-            </details>
-
-            <!-- Add more days here -->
-
-          </div>
-        </details>
-
-        <!-- Add more weeks -->
-
-      </div>
-      <button onclick="show('home')" class="mt-6 bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded">← Back</button>
-    </section>
-
-    <!-- PROJECT -->
-    <section id="project">
-      <h2 class="text-3xl text-orange-400 font-bold mb-6">Final Project</h2>
-      <div class="bg-neutral-900 p-6 rounded-lg border border-orange-500">
-        <p class="text-gray-300">
-          Built a Smart Weather Station with AI predictions for temperature & humidity using trained ML models on microcontrollers. Data was transmitted via MQTT to the cloud for visualization.
-        </p>
-      </div>
-      <button onclick="show('home')" class="mt-6 bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded">← Back</button>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery">
-      <h2 class="text-3xl text-orange-400 font-bold mb-6">Training Gallery</h2>
-      <p class="text-gray-400">Upload images using &lt;img src="..." class="rounded shadow"&gt; when ready.</p>
-      <button onclick="show('home')" class="mt-6 bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded">← Back</button>
-    </section>
-
-    <!-- CERTIFICATES -->
-    <section id="certificates">
-      <h2 class="text-3xl text-orange-400 font-bold mb-6">Certificates</h2>
-      <p class="text-gray-400">You can upload certificate images or links here.</p>
-      <button onclick="show('home')" class="mt-6 bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded">← Back</button>
-    </section>
-
+  <!-- Navigation Buttons -->
+  <div class="flex flex-wrap justify-center gap-4 my-8">
+    <button onclick="showSection('diary')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Training Diary</button>
+    <button onclick="showSection('project')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Project</button>
+    <button onclick="showSection('gallery')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Gallery</button>
+    <button onclick="showSection('certificates')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Certificates</button>
+    <button onclick="showSection('acknowledgement')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Acknowledgement</button>
   </div>
 
-  <!-- JS for Navigation -->
+  <!-- Diary -->
+  <section id="diary" class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-semibold text-[#521C0D] mb-4">Training Diary</h2>
+    <details class="mb-4">
+      <summary class="cursor-pointer text-lg text-[#521C0D]">Week 1 - AI/ML Basics</summary>
+      <details class="ml-4 mt-2">
+        <summary class="cursor-pointer">Day 1 - Introduction to AI</summary>
+        <p class="ml-4">Discussed the definition of Artificial Intelligence, its real-world applications, and types like narrow and general AI.</p>
+      </details>
+      <details class="ml-4 mt-2">
+        <summary class="cursor-pointer">Day 2 - Machine Learning Fundamentals</summary>
+        <p class="ml-4">Covered supervised vs unsupervised learning, use cases, and the importance of data in training models.</p>
+      </details>
+    </details>
+  </section>
+
+  <!-- Project -->
+  <section id="project" class="max-w-2xl mx-auto">
+    <h2 class="text-2xl font-semibold text-[#521C0D] mb-2">Project</h2>
+    <p class="text-[#521C0D]">Details of your final SmartFusion project will go here. You can add title, description, tools used, and GitHub link.</p>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="max-w-2xl mx-auto">
+    <h2 class="text-2xl font-semibold text-[#521C0D] mb-2">Training Gallery</h2>
+    <p class="text-[#521C0D]">Upload your training photos and display them here with captions. Use image tags once ready.</p>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates" class="max-w-2xl mx-auto">
+    <h2 class="text-2xl font-semibold text-[#521C0D] mb-2">Certificates</h2>
+    <p class="text-[#521C0D]">Add scanned certificates or upload PDF links here once available.</p>
+  </section>
+
+  <!-- Acknowledgement -->
+  <section id="acknowledgement" class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-semibold text-[#521C0D] mb-4">Acknowledgement</h2>
+    <p class="mb-4 text-[#521C0D]">
+      I would like to express my sincere gratitude to the IT Department of Guru Nanak Dev Engineering College, Ludhiana, for providing me the opportunity to undertake a 4-week training program that has significantly enriched my technical knowledge and practical skills.
+    </p>
+    <p class="mb-4 text-[#521C0D]">
+      I extend my heartfelt thanks to Prof. Himani and Dr. Randeep Kaur for their valuable guidance, support, and encouragement throughout the training period. Their mentorship and insights have been instrumental in making this experience both educational and inspiring.
+    </p>
+    <p class="text-[#521C0D]">
+      I am Harjot Kaur, a student of the Computer Science and Engineering Department, Roll No. 2302535, and I feel privileged to have been part of this training initiative. It has been a rewarding experience that has contributed meaningfully to my academic and professional growth.
+    </p>
+  </section>
+
+  <!-- JavaScript to toggle sections -->
   <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
