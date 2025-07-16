@@ -8,12 +8,10 @@
   <style>
     body {
       font-family: 'Times New Roman', serif;
-      background-image: url('https://gndec.ac.in/ictaaem/images/gndec1.jpeg');
+      background: url('https://i.pinimg.com/736x/17/98/99/1798991b6c04db0156998215aa4c73de.jpg');
       background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-position: center;
       color: #521C0D;
+      transition: background-position 0.1s;
     }
     section {
       display: none;
@@ -26,7 +24,7 @@
     }
   </style>
 </head>
-<body class="bg-[#F4E7E1] min-h-screen p-6">
+<body class="bg-[#F4E7E1] min-h-screen p-6" onmousemove="moveBackground(event)">
 
   <!-- Header -->
   <header class="text-center mb-8 bg-[#FFD586] bg-opacity-90 py-6 px-4 rounded-lg shadow-md">
@@ -59,6 +57,7 @@
 
   <!-- Navigation Buttons -->
   <div class="flex flex-wrap justify-center gap-4 my-8">
+    <button onclick="showSection('trainee')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Student Info</button>
     <button onclick="showSection('diary')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Training Diary</button>
     <button onclick="showSection('project')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Project</button>
     <button onclick="showSection('gallery')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Gallery</button>
@@ -69,17 +68,13 @@
   <!-- Diary -->
   <section id="diary" class="max-w-3xl mx-auto">
     <h2 class="text-2xl font-semibold text-[#521C0D] mb-4">Training Diary</h2>
-    <details class="mb-4">
-      <summary class="cursor-pointer text-lg text-[#521C0D]">Week 1 - AI/ML Basics</summary>
-      <details class="ml-4 mt-2">
-        <summary class="cursor-pointer">Day 1 - Introduction to AI</summary>
-        <p class="ml-4">Discussed the definition of Artificial Intelligence, its real-world applications, and types like narrow and general AI.</p>
-      </details>
-      <details class="ml-4 mt-2">
-        <summary class="cursor-pointer">Day 2 - Machine Learning Fundamentals</summary>
-        <p class="ml-4">Covered supervised vs unsupervised learning, use cases, and the importance of data in training models.</p>
-      </details>
-    </details>
+    <ul class="list-disc pl-6 text-[#521C0D] space-y-2">
+      <li><a href="week1-day1.html" class="text-blue-800 underline hover:text-orange-700">Week 1 - Day 1: Introduction to AI</a></li>
+      <li><a href="week1-day2.html" class="text-blue-800 underline hover:text-orange-700">Week 1 - Day 2: Machine Learning Fundamentals</a></li>
+      <li><a href="week2-day1.html" class="text-blue-800 underline hover:text-orange-700">Week 2 - Day 1: Introduction to IoT</a></li>
+      <li><a href="week3-day1.html" class="text-blue-800 underline hover:text-orange-700">Week 3 - Day 1: Embedded Systems Overview</a></li>
+      <li><a href="week4-day1.html" class="text-blue-800 underline hover:text-orange-700">Week 4 - Day 1: Final Project Kickoff</a></li>
+    </ul>
   </section>
 
   <!-- Project -->
@@ -114,14 +109,21 @@
     </p>
   </section>
 
-  <!-- JavaScript to toggle sections -->
+  <!-- JavaScript to toggle sections and animate background -->
   <script>
     function showSection(id) {
       document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
+
+    function moveBackground(e) {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      document.body.style.backgroundPosition = `${x}% ${y}%`;
+    }
   </script>
 
 </body>
 </html>
+
 
