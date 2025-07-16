@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Week 1 - Day 2</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #fffefc;
+      color: #521C0D;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: #521C0D;
+    }
+    section {
+      background-color: #FFF3C7;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header class="text-center mb-6">
+    <h1 class="text-4xl font-bold mb-2">Week 1 - Day 2</h1>
+    <h2 class="text-2xl font-semibold">IoT Architecture, Sensors, Actuators & Boards</h2>
+  </header>
+
+  <section>
+    <h3 class="text-xl font-bold mb-2">Architecture of IoT</h3>
+    <ul class="list-disc ml-6 space-y-2">
+      <li><strong>Cisco's Seven-Level IoT Model:</strong> Includes Perception, Network, Data Processing, Services, Application, Business, and Security levels for complete IoT solution.</li>
+      <li><strong>Oracle's IoT Architecture:</strong> Focuses on Device Virtualization, Stream Analytics, and Enterprise Integration for scalable IoT development.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 class="text-xl font-bold mb-2">Introduction to Sensors and Smart Sensors</h3>
+    <p>Sensors detect physical inputs from the environment and convert them into electrical signals. Smart sensors also include signal conditioning, processing, and communication features.</p>
+  </section>
+
+  <section>
+    <h3 class="text-xl font-bold mb-2">Introduction to Actuators</h3>
+    <p>Actuators receive signals from controllers and perform physical actions such as movement, heating, or sound. Examples: Motors, Buzzers, and Valves.</p>
+  </section>
+
+  <section>
+    <h3 class="text-xl font-bold mb-2">Robotic System</h3>
+    <ul class="list-disc ml-6 space-y-2">
+      <li><strong>Sensors in Robotics:</strong> Help robots sense their environment (e.g., IR, Ultrasonic).</li>
+      <li><strong>Actuators in Robotics:</strong> Convert control signals into motion (e.g., servo motors).</li>
+      <li><strong>Smart Applications:</strong> Automated vacuum cleaners, robotic arms in manufacturing, and delivery robots.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 class="text-xl font-bold mb-2">Difference between Arduino, Raspberry Pi, and NodeMCU</h3>
+    <div class="overflow-x-auto">
+      <table class="table-auto w-full text-left border border-[#521C0D]">
+        <thead class="bg-[#FFE8B0]">
+          <tr>
+            <th class="border border-[#521C0D] px-4 py-2">Feature</th>
+            <th class="border border-[#521C0D] px-4 py-2">Arduino UNO</th>
+            <th class="border border-[#521C0D] px-4 py-2">Raspberry Pi</th>
+            <th class="border border-[#521C0D] px-4 py-2">NodeMCU</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-[#521C0D] px-4 py-2">Type</td>
+            <td class="border border-[#521C0D] px-4 py-2">Microcontroller</td>
+            <td class="border border-[#521C0D] px-4 py-2">Single-board Computer</td>
+            <td class="border border-[#521C0D] px-4 py-2">Microcontroller with Wi-Fi</td>
+          </tr>
+          <tr>
+            <td class="border border-[#521C0D] px-4 py-2">Operating System</td>
+            <td class="border border-[#521C0D] px-4 py-2">No OS (bare metal)</td>
+            <td class="border border-[#521C0D] px-4 py-2">Runs Linux-based OS</td>
+            <td class="border border-[#521C0D] px-4 py-2">No OS</td>
+          </tr>
+          <tr>
+            <td class="border border-[#521C0D] px-4 py-2">Connectivity</td>
+            <td class="border border-[#521C0D] px-4 py-2">No inbuilt Wi-Fi</td>
+            <td class="border border-[#521C0D] px-4 py-2">Ethernet, Wi-Fi (via USB dongle or onboard)</td>
+            <td class="border border-[#521C0D] px-4 py-2">Built-in Wi-Fi</td>
+          </tr>
+          <tr>
+            <td class="border border-[#521C0D] px-4 py-2">Programming Language</td>
+            <td class="border border-[#521C0D] px-4 py-2">C/C++ (Arduino IDE)</td>
+            <td class="border border-[#521C0D] px-4 py-2">Python, C/C++, etc.</td>
+            <td class="border border-[#521C0D] px-4 py-2">C++, Lua (Arduino IDE or ESP tools)</td>
+          </tr>
+          <tr>
+            <td class="border border-[#521C0D] px-4 py-2">Use Case</td>
+            <td class="border border-[#521C0D] px-4 py-2">Sensor interfacing, robotics</td>
+            <td class="border border-[#521C0D] px-4 py-2">Full-fledged computing tasks</td>
+            <td class="border border-[#521C0D] px-4 py-2">IoT applications, Wi-Fi-based automation</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h3 class="text-xl font-bold mb-2">Sensors</h3>
+    <ul class="list-disc ml-6 space-y-2">
+      <li><strong>Motion Detection (PIR):</strong> Detects movement using infrared radiation.</li>
+      <li><strong>Humidity (DHT11/DHT22):</strong> Measures moisture in the air, useful in climate monitoring.</li>
+      <li><strong>Temperature (DHT11/DHT22):</strong> Captures temperature data for smart environments.</li>
+      <li><strong>Light Detection (LDR):</strong> Senses light intensity, commonly used in street lights and alarms.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 class="text-xl font-bold mb-2">Wokwi Simulator</h3>
+    <p>The Wokwi simulator is a web-based tool to simulate Arduino, ESP32, and other boards for testing circuits and codes without hardware.</p>
+  </section>
+
+  <div class="text-center mt-10">
+    <a href="index.html" class="text-blue-700 underline hover:text-orange-600 text-lg">← Back to Main Page</a>
+  </div>
+</body>
+</html>
