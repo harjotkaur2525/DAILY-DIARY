@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Week 2 - Day 9</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #fffefc;
+      color: #521C0D;
+      padding: 2rem;
+    }
+    section {
+      background-color: #FFF3C7;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+    }
+    code {
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+  <header class="text-center mb-6">
+    <h1 class="text-4xl font-bold mb-2">Week 2 - Day 9</h1>
+    <h2 class="text-2xl font-semibold">Machine Learning</h2>
+  </header>
+
+  <section>
+    <h3 class="text-xl font-bold mb-2">Introduction to Machine Learning</h3>
+    <p class="mb-2">Machine Learning (ML) is a subset of artificial intelligence that enables systems to learn and improve from experience without being explicitly programmed. It involves building algorithms that can identify patterns, make decisions, and predict outcomes from data.</p>
+  </section>
+
+  <section>
+    <h3 class="text-xl font-bold mb-2">Applications of Machine Learning</h3>
+    <ul class="list-disc ml-6 space-y-2">
+      <li>Speech and Image Recognition</li>
+      <li>Spam Detection in Emails</li>
+      <li>Recommendation Systems (e.g., Netflix, Amazon)</li>
+      <li>Autonomous Vehicles</li>
+      <li>Medical Diagnosis and Treatment Prediction</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 class="text-xl font-bold mb-2">Training and Testing Phase</h3>
+    <p><strong>Training Phase:</strong> The model learns patterns from the training data.</p>
+    <p><strong>Testing Phase:</strong> The model's performance is evaluated using new, unseen data.</p>
+  </section>
+
+  <section>
+    <h3 class="text-xl font-bold mb-2">Types of Learning</h3>
+    <ul class="list-disc ml-6 space-y-2">
+      <li><strong>Supervised Learning:</strong> Model learns from labeled data.
+        <ul class="list-disc ml-6">
+          <li><strong>Regression:</strong> Predicts continuous values (e.g., house prices).</li>
+          <li><strong>Classification:</strong> Predicts categories (e.g., spam or not).</li>
+        </ul>
+      </li>
+      <li><strong>Unsupervised Learning:</strong> Model learns from unlabeled data (e.g., clustering, dimensionality reduction).</li>
+      <li><strong>Reinforcement Learning:</strong> Model learns by interacting with an environment and receiving feedback (rewards or penalties).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 class="text-xl font-bold mb-2">Algorithms</h3>
+    <ul class="list-disc ml-6">
+      <li><strong>Linear Regression:</strong> A basic algorithm used to predict a continuous output based on input features. It assumes a linear relationship between the variables.</li>
+    </ul>
+    <h4 class="text-lg font-semibold mt-4">Linear Regression Algorithm (Python Example)</h4>
+    <pre><code>from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Sample training data
+X = np.array([[1], [2], [3], [4], [5]])
+y = np.array([2, 4, 6, 8, 10])
+
+# Model creation and training
+model = LinearRegression()
+model.fit(X, y)
+
+# Predicting
+prediction = model.predict([[6]])
+print("Predicted value for input 6:", prediction[0])</code></pre>
+  </section>
+
+  <div class="text-center mt-10">
+    <a href="index.html" class="text-blue-700 underline hover:text-orange-600 text-lg">← Back to Main Page</a>
+  </div>
+</body>
+</html>
