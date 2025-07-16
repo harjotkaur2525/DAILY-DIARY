@@ -2,86 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SmartFusion Training Diary</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      font-family: 'Times New Roman', serif;
-      background: url('https://wallpapers.com/images/featured/brown-aesthetic-wdan69t9mhfvfwqx.jpg');
+      background: url('https://wallpapers.com/images/featured/brown-aesthetic-wdan69t9mhfvfwqx.jpg') no-repeat center center fixed;
       background-size: cover;
+      font-family: 'Times New Roman', serif;
       color: #521C0D;
-      transition: background-position 0.1s;
     }
     section {
-      display: none;
-      background-color: rgba(255, 233, 154, 0.5);
+      background-color: rgba(255, 233, 154, 0.6);
       padding: 2rem;
       border-radius: 1rem;
     }
-    section.active {
-      display: block;
-    }
   </style>
 </head>
-<body class="bg-[#F4E7E1] min-h-screen p-6" onmousemove="moveBackground(event)">
+<body class="min-h-screen p-6">
 
-  <!-- Header -->
   <header class="text-center mb-8 bg-[#FFD586] bg-opacity-90 py-6 px-4 rounded-lg shadow-md">
-    <h1 class="text-4xl font-bold text-[#521C0D]">SmartFusion Training Diary</h1>
-    <h2 class="text-xl text-[#521C0D] mt-2 tracking-wide">GURU NANAK DEV ENGINEERING COLLEGE, LUDHIANA</h2>
-    <div class="flex justify-center mt-6">
-      <img 
-        src="https://img.jagranjosh.com/images/2022/June/162022/GNDEC.jpg" 
-        alt="GNDEC Logo"
-        class="w-32 bg-white bg-opacity-60 p-2 rounded shadow-lg"
-      />
-    </div>
-    <div class="max-w-2xl mx-auto mt-6 bg-white bg-opacity-50 p-4 rounded">
-      <p class="text-[#521C0D]">
-        A 4-week deep dive into SmartFusion – blending AI, ML, and IoT into real-world embedded systems. Hands-on learning, project development, and creative exploration.
-      </p>
-    </div>
+    <h1 class="text-4xl font-bold">SmartFusion Training Diary</h1>
+    <h2 class="text-xl mt-2">GURU NANAK DEV ENGINEERING COLLEGE, LUDHIANA</h2>
   </header>
 
-  <!-- Trainee Info -->
-  <section id="trainee" class="active max-w-xl mx-auto text-center">
-    <h2 class="text-2xl font-semibold text-[#521C0D] mb-2">Trainee Information</h2>
-    <ul class="list-none space-y-2 text-[#521C0D]">
-      <li><strong>Name:</strong> Harjot Kaur</li>
-      <li><strong>Class:</strong> CSB1</li>
-      <li><strong>URN:</strong> 2302535</li>
-      <li><strong>Branch:</strong> Computer Science and Engineering</li>
-    </ul>
-  </section>
+  <section class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">Training Diary</h2>
+    <ul class="space-y-4">
 
-  <!-- Navigation Buttons -->
-  <div class="flex flex-wrap justify-center gap-4 my-8">
-    <button onclick="showSection('trainee')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Student Info</button>
-    <button onclick="showSection('diary')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Training Diary</button>
-    <button onclick="showSection('project')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Project</button>
-    <button onclick="showSection('gallery')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Gallery</button>
-    <button onclick="showSection('certificates')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Certificates</button>
-    <button onclick="showSection('acknowledgement')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Acknowledgement</button>
-  </div>
-
-  <!-- Diary -->
-  <section id="diary" class="max-w-3xl mx-auto">
-    <h2 class="text-2xl font-semibold text-[#521C0D] mb-4">Training Diary</h2>
-    <ul class="space-y-4 text-[#521C0D]">
+      <!-- Week 1 -->
       <li>
-        <button onclick="toggleWeek('week1')" class="font-bold text-lg hover:text-orange-700 underline">Week 1</button>
-        <ul id="week1" class="pl-6 hidden list-disc">
+        <button onclick="toggleWeek('week1')" class="font-bold text-lg underline hover:text-orange-700">Week 1</button>
+        <ul id="week1" class="hidden pl-6 list-disc space-y-2">
           <li><a href="week1-day1.html" class="text-blue-800 underline hover:text-orange-700">Day 1</a></li>
           <li><a href="week1-day2.html" class="text-blue-800 underline hover:text-orange-700">Day 2</a></li>
           <li><a href="week1-day3.html" class="text-blue-800 underline hover:text-orange-700">Day 3</a></li>
         </ul>
       </li>
+
+      <!-- Week 2 -->
       <li>
-        <button onclick="toggleWeek('week2')" class="font-bold text-lg hover:text-orange-700 underline">Week 2</button>
-        <ul id="week2" class="pl-6 hidden list-disc">
-          <li><a href="week2-day1.html" class="text-blue-800 underline hover:text-orange-700">Day 1</a></li>
-          <li><a href="week2-day2.html" class="text-blue-800 underline hover:text-orange-700">Day 2</a></li>
+        <button onclick="toggleWeek('week2')" class="font-bold text-lg underline hover:text-orange-700">Week 2</button>
+        <ul id="week2" class="hidden pl-6 list-disc space-y-2">
           <li><a href="week2-day4.html" class="text-blue-800 underline hover:text-orange-700">Day 4</a></li>
           <li><a href="week2-day5.html" class="text-blue-800 underline hover:text-orange-700">Day 5</a></li>
           <li><a href="week2-day6.html" class="text-blue-800 underline hover:text-orange-700">Day 6</a></li>
@@ -89,76 +50,33 @@
           <li><a href="week2-day8.html" class="text-blue-800 underline hover:text-orange-700">Day 8</a></li>
         </ul>
       </li>
+
+      <!-- Week 3 -->
       <li>
-        <button onclick="toggleWeek('week3')" class="font-bold text-lg hover:text-orange-700 underline">Week 3</button>
-        <ul id="week3" class="pl-6 hidden list-disc">
-          <li><a href="week3-day1.html" class="text-blue-800 underline hover:text-orange-700">Day 1</a></li>
+        <button onclick="toggleWeek('week3')" class="font-bold text-lg underline hover:text-orange-700">Week 3</button>
+        <ul id="week3" class="hidden pl-6 list-disc space-y-2">
           <li><a href="week3-day9.html" class="text-blue-800 underline hover:text-orange-700">Day 9</a></li>
           <li><a href="week3-day10.html" class="text-blue-800 underline hover:text-orange-700">Day 10</a></li>
+          <li><a href="week3-day11.html" class="text-blue-800 underline hover:text-orange-700">Day 11</a></li>
           <li><a href="week3-day12.html" class="text-blue-800 underline hover:text-orange-700">Day 12</a></li>
           <li><a href="week3-day13.html" class="text-blue-800 underline hover:text-orange-700">Day 13</a></li>
         </ul>
       </li>
+
+      <!-- Week 4 -->
       <li>
-        <button onclick="toggleWeek('week4')" class="font-bold text-lg hover:text-orange-700 underline">Week 4</button>
-        <ul id="week4" class="pl-6 hidden list-disc">
-          <li><a href="week4-day1.html" class="text-blue-800 underline hover:text-orange-700">Day 1</a></li>
-          <li><a href="week4-day11.html" class="text-blue-800 underline hover:text-orange-700">Day 11</a></li>
-        </ul>
+        <a href="week4.html" class="font-bold text-lg underline hover:text-orange-700">Week 4</a>
       </li>
+
     </ul>
   </section>
 
-  <!-- Project -->
-  <section id="project" class="max-w-2xl mx-auto">
-    <h2 class="text-2xl font-semibold text-[#521C0D] mb-2">Project</h2>
-    <p class="text-[#521C0D]">Details of your final SmartFusion project will go here. You can add title, description, tools used, and GitHub link.</p>
-  </section>
-
-  <!-- Gallery -->
-  <section id="gallery" class="max-w-2xl mx-auto">
-    <h2 class="text-2xl font-semibold text-[#521C0D] mb-2">Training Gallery</h2>
-    <p class="text-[#521C0D]">Upload your training photos and display them here with captions. Use image tags once ready.</p>
-  </section>
-
-  <!-- Certificates -->
-  <section id="certificates" class="max-w-2xl mx-auto">
-    <h2 class="text-2xl font-semibold text-[#521C0D] mb-2">Certificates</h2>
-    <p class="text-[#521C0D]">Add scanned certificates or upload PDF links here once available.</p>
-  </section>
-
-  <!-- Acknowledgement -->
-  <section id="acknowledgement" class="max-w-3xl mx-auto">
-    <h2 class="text-2xl font-semibold text-[#521C0D] mb-4">Acknowledgement</h2>
-    <p class="mb-4 text-[#521C0D]">
-      I would like to express my sincere gratitude to the IT Department of Guru Nanak Dev Engineering College, Ludhiana, for providing me the opportunity to undertake a 4-week training program that has significantly enriched my technical knowledge and practical skills.
-    </p>
-    <p class="mb-4 text-[#521C0D]">
-      I extend my heartfelt thanks to Prof. Himani and Dr. Randeep Kaur for their valuable guidance, support, and encouragement throughout the training period. Their mentorship and insights have been instrumental in making this experience both educational and inspiring.
-    </p>
-    <p class="text-[#521C0D]">
-      I am Harjot Kaur, a student of the Computer Science and Engineering Department, Roll No. 2302535, and I feel privileged to have been part of this training initiative. It has been a rewarding experience that has contributed meaningfully to my academic and professional growth.
-    </p>
-  </section>
-
-  <!-- JavaScript -->
   <script>
-    function showSection(id) {
-      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-
-    function moveBackground(e) {
-      const x = (e.clientX / window.innerWidth) * 100;
-      const y = (e.clientY / window.innerHeight) * 100;
-      document.body.style.backgroundPosition = `${x}% ${y}%`;
-    }
-
-    function toggleWeek(weekId) {
-      const ul = document.getElementById(weekId);
-      ul.classList.toggle('hidden');
+    function toggleWeek(id) {
+      document.getElementById(id).classList.toggle('hidden');
     }
   </script>
 
 </body>
 </html>
+
