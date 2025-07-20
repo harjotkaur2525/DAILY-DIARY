@@ -6,6 +6,23 @@
   <title>SmartFusion Training Diary</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
+</script>
     body {
       font-family: 'Times New Roman', serif;
       background: url('https://wallpapers.com/images/featured/brown-aesthetic-wdan69t9mhfvfwqx.jpg');
@@ -34,6 +51,9 @@
 
 </head>
 <body class="bg-[#F4E7E1] min-h-screen p-6" onmousemove="moveBackground(event)">
+
+  <a href="index.html#diary" class="text-orange-700 underline block mb-4 text-lg">← Back to Diary</a>
+
 
   <!-- Header -->
   <header class="text-center mb-8 bg-[#FFD586] bg-opacity-90 py-6 px-4 rounded-lg shadow-md">
