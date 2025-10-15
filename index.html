@@ -8,6 +8,7 @@
   <style>
     body {
       font-family: 'Times New Roman', serif;
+      /* Updated to use the new college image */
       background: url('https://www.targetadmission.com/img/colleges/newc/5413-875295.jpg'); 
       background-size: cover;
       color: #521C0D;
@@ -15,8 +16,8 @@
     }
     section {
       display: none;
-      /* Increased opacity slightly for better readability */
-      background-color: rgba(255, 233, 154, 0.75); 
+      /* Increased opacity for better readability on busy background */
+      background-color: rgba(255, 233, 154, 0.95); 
       padding: 2rem;
       border-radius: 1rem;
     }
@@ -26,6 +27,10 @@
     /* Custom styles for Swiper navigation arrows */
     .swiper-button-next, .swiper-button-prev {
         color: #521C0D !important;
+    }
+    /* Added custom class for high-visibility header background */
+    .high-visibility-bg {
+        background-color: rgba(255, 213, 134, 0.98); /* Near-solid version of #FFD586 */
     }
   </style>
   <!-- Swiper.js CSS -->
@@ -44,7 +49,8 @@
 
 
   <!-- Header -->
-  <header class="text-center mb-8 bg-[#FFD586] bg-opacity-90 py-6 px-4 rounded-lg shadow-md">
+  <!-- Applied new high-visibility class -->
+  <header class="text-center mb-8 high-visibility-bg py-6 px-4 rounded-lg shadow-md">
     <h1 class="text-4xl font-bold text-[#521C0D]">SmartFusion Training Diary</h1>
     <h2 class="text-xl text-[#521C0D] mt-2 tracking-wide">GURU NANAK DEV ENGINEERING COLLEGE, LUDHIANA</h2>
     <div class="flex justify-center mt-6">
@@ -142,14 +148,9 @@
         <img src="p5.jpg" alt="project" class="w-full h-80 object-cover rounded-lg" />
       </div>
       <div class="swiper-slide">
-        <img src="p4.jpg" alt="project" class="w-full h-80 object-cover rounded-lg" />
-      </div>
-      <div class="swiper-slide">
         <img src="group_photo.png" alt="group" class="w-full h-80 object-cover rounded-lg" />
       </div>
-      <div class="swiper-slide">
-        <img src="p6.jpg" alt="team" class="w-full h-80 object-cover rounded-lg" />
-      </div>
+      <!-- Removed slides for p4.jpg and p6.jpg -->
       <!-- Add more slides as needed -->
     </div>
 
@@ -237,4 +238,5 @@
 
 </body>
 </html>
+
 
