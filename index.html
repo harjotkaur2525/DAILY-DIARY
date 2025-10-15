@@ -6,38 +6,26 @@
   <title>SmartFusion Training Diary</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    }
-  });
-</script>
     body {
       font-family: 'Times New Roman', serif;
-      background: url('https://wallpapers.com/images/featured/brown-aesthetic-wdan69t9mhfvfwqx.jpg');
+      background: url('https://www.targetadmission.com/img/colleges/newc/5413-875295.jpg'); 
       background-size: cover;
       color: #521C0D;
       transition: background-position 0.1s;
     }
     section {
       display: none;
-      background-color: rgba(255, 233, 154, 0.5);
+      /* Increased opacity slightly for better readability */
+      background-color: rgba(255, 233, 154, 0.75); 
       padding: 2rem;
       border-radius: 1rem;
     }
     section.active {
       display: block;
+    }
+    /* Custom styles for Swiper navigation arrows */
+    .swiper-button-next, .swiper-button-prev {
+        color: #521C0D !important;
     }
   </style>
   <!-- Swiper.js CSS -->
@@ -84,15 +72,13 @@
     </ul>
   </section>
 
-  <!-- Navigation Buttons -->
+  <!-- Navigation Buttons (Project button removed) -->
   <div class="flex flex-wrap justify-center gap-4 my-8">
     <button onclick="showSection('student')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Student Info</button>
     <button onclick="showSection('acknowledgement')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Acknowledgement</button>
     <button onclick="showSection('diary')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Training Diary</button>
-    <button onclick="showSection('project')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Project</button>
     <button onclick="showSection('gallery')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Gallery</button>
     <button onclick="showSection('certificates')" class="bg-[#FF9B45] hover:bg-[#FFD586] text-[#521C0D] px-4 py-2 rounded">Certificates</button>
-    
   </div>
 
   <!-- Diary -->
@@ -132,12 +118,6 @@
   </ul>
 </section>
 
-
-  <!-- Project -->
-  <section id="project" class="max-w-2xl mx-auto">
-    <h2 class="text-2xl font-semibold text-[#521C0D] mb-2">Project</h2>
-    <p class="text-[#521C0D]">Details of your final SmartFusion project will go here. You can add title, description, tools used, and GitHub link.</p>
-  </section>
 
   <!-- Gallery -->
   <section id="gallery" class="max-w-3xl mx-auto">
@@ -218,6 +198,9 @@
 
   <!-- JavaScript -->
   <script>
+    // Initial section shown on page load is 'student'
+    showSection('student'); 
+
     function showSection(id) {
       document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
@@ -233,7 +216,25 @@
       const ul = document.getElementById(weekId);
       ul.classList.toggle('hidden');
     }
+
+    // --- Swiper Initialization for Gallery ---
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
   </script>
 
 </body>
 </html>
+
